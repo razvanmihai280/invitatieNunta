@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Beautifully+Delicious&display=swap');
+
+/* Stilizare pentru header */
+header {
+  background-color: #f8f9fa;
+  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Stilizare container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Stilizare branding */
+.branding h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  font-family: 'Beautifully Delicious', cursive;
+  color: #333;
+}
+
+/* Stilizare meniu de navigare */
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links li:first-child {
+  margin-left: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2rem;
+  font-family: 'Beautifully Delicious', cursive;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #555;
+}
+
+/* Stilizare pentru meniu burger */
+.burger {
+  display: none; /* Ascunde meniul burger pe desktop */
+  flex-direction: column;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.burger .line {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 4px;
+  transition: transform 0.3s ease;
+}
+
+/* Media query pentru dispozitive mobile */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    /*margin-top: 20px;*/
+    display: none; /* Ascunde meniul de navigare */
+    position: absolute;
+    top: 60px; /* Ajustați în funcție de înălțimea meniului */
+    left: 0;
+    right: 0;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    display: flex; /* Afiseaza meniul pe ecranele mici cand este activat */
+  }
+
+  .burger {
+    display: flex; /* Arata meniul burger pe ecranele mici */
+    align-self: center; /* Aliniați burger-ul în centru */
+    margin-left: auto; /* Mutați burger-ul în dreapta */
+  }
+
+  .burger .line {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px;
+    transition: transform 0.3s ease;
+  }
+}

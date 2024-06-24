@@ -1,0 +1,21 @@
+<header>
+    <div class="container">
+      <div class="branding">
+        <h1>Ana si Andrei</h1> <!-- Înlocuiți cu logo-ul dvs. sau numele site-ului -->
+      </div>
+      <nav>
+        <div class="burger" (click)="toggleMenu()">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <ul class="nav-links" [ngClass]="{'active': isMenuOpen}">
+          <li><a href="#despre-noi" (click)="closeMenu()">Despre Noi</a></li>
+          <li><a href="#detalii-eveniment" (click)="closeMenu()">Detalii Eveniment</a></li>
+          <li><a href="#confirmare-prezenta" (click)="closeMenu()">Confirmare Prezență</a></li>
+          <li><a href="#contact" (click)="closeMenu()">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
